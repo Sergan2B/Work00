@@ -8,10 +8,8 @@ class Factory {
             return carModel
         }
 
-        fun <Car : Auto> demo(car: Source<Car>): Source<Auto> {
-            val objects: Source<Auto> = car // !!! Not allowed in Java
-            // ...
-            return objects
+        fun <Car : Auto> demo(car: Creatable<Car>): Creatable<Auto> {
+            return car
         }
     }
 }

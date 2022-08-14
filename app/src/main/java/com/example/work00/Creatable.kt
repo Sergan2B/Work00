@@ -1,4 +1,4 @@
 package com.example.work00
 
-interface Creatable {}
+interface Creatable<out T> {}
 

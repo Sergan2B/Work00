@@ -1,4 +1,4 @@
 package com.example.work00
 
-class Coupet(brand: String, type: String) : CarModel(brand, type) {
+class Coupet(override var brand: String, override var type: String) : Auto(),Creatable<Auto> {
 }

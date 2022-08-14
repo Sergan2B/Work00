@@ -10,27 +10,17 @@ open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         thiser()
     }
 
     private fun thiser() {
-        val vitrins = arrayListOf<Creatable>()
-
+        val vitrins = arrayListOf<Creatable<Auto>>()
         val car : Coupet = createCar(Coupet("22222", ""))
-
-       // val demo = demo(CarModel("Sergan", ""))
-        val demo1: Sedan = demo(CarModel("123", "")) as Sedan
-        val demo3: Coupet = demo(CarModel("asca", "")) as Coupet
-
-        if (car != null) {
-            vitrins.add(car)
-            Toast.makeText(this, car.brand, Toast.LENGTH_SHORT).show()
-         //   Toast.makeText(this, demo.brand, Toast.LENGTH_SHORT).show()
-            Toast.makeText(this, demo1.brand, Toast.LENGTH_SHORT).show()
-            Toast.makeText(this, demo3.brand, Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, "bad", Toast.LENGTH_SHORT).show()
-        }
+        val car1 : Sedan = createCar(Sedan("dfaef", ""))
+        val car2 : Universal = createCar(Universal("222xczvxv22", ""))
+        vitrins.add(car)
+        vitrins.add(car1)
+        vitrins.add(car2)
+        Toast.makeText(this, vitrins.size.toString(), Toast.LENGTH_SHORT).show()
     }
 }
