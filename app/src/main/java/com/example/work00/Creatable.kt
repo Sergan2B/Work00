@@ -1,4 +1,5 @@
 package com.example.work00
 
-interface Creatable<out T> {}
+//Интерфейс для общей связи моделей машин
+interface Creatable<T>
 
